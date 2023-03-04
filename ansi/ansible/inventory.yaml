@@ -1,0 +1,13 @@
+---
+webservers:
+  hosts:
+    web1:
+      ansible_user: '{{ lookup("env", "USERNAME") }}'
+      ansible_password: '{{ lookup("env", "PASSWORD") }}'
+      ansible_host: '{{ lookup("env", "IP") }}'
+      ansible_port: '{{ lookup("env", "PORT") }}'
+      http_host: toka.local
+      http_conf: toka.local.conf
+  vars:
+    http_port: "8090"
+
